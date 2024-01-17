@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1640833906651-6bd1af7aeea3?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 5%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: -1;
+  border-radius: 20px;
+  transform: rotate(5deg);
+}
+
+@media screen and (max-width: 991px) {
+  .main::after {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main::after {
+    top: 20%;
+    width: 90%;
+    height: 60%;
+  }
+}
+
+nav {
+  width: 100%;
+
+  position: fixed;
+  background-color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+}
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d37d16;
+  text-transform: capitalize;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 20px;
+}
+nav ul li {
+  padding: 0 10px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav .btn {
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  gap: 45px;
+}
+
+.content h1 {
+  font-size: 80px;
+  font-weight: 200;
+}
+.content h1 span {
+  color: #d37d16;
+}
+.content p {
+  line-height: 32px;
+  font-size: 18px;
+}
+
+.content .btn {
+  text-decoration: none;
+  padding: 14px 40px;
+  width: fit-content;
+  border: 1px solid #d37d16;
+  color: #d37d16;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.7s ease;
+}
+
+.content .btn:hover {
+  background-color: #d37d16;
+  color: #fff;
+}
+
+.coin-list {
+  position: absolute;
+  right: 10%;
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  padding: 10px;
+}
+
+.coin-list .coin {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid #d37d16;
+  padding: 30px;
+}
+.coin-list .coin:last-child {
+  border-right: none;
+}
+.coin-list .coin img {
+  width: 60px;
+  height: 60px;
+}
+.coin-list .coin-info h3 {
+  font-weight: 500;
+}
+
+.coin-list .coin-info h3 i {
+  font-size: 14px;
+  color: #d37d16;
+}
+
+.coin-list .coin-info p {
+  color: #d37d16;
+}
